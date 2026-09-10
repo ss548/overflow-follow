@@ -1,0 +1,28 @@
+.overflow-follow {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  color: var(--overflow-follow-color, inherit);
+  font: inherit;
+  letter-spacing: inherit;
+  outline: none;
+  touch-action: pan-y;
+}
+
+.overflow-follow:focus-visible {
+  border-radius: var(--overflow-follow-focus-radius, 2px);
+  box-shadow: 0 0 0 2px var(--overflow-follow-focus-color, currentColor);
+}
+
+.overflow-follow__content {
+  display: inline-flex;
+  width: max-content;
+  max-width: none;
+  align-items: center;
+  white-space: nowrap;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+  pointer-events: none;
+}

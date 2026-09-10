@@ -1,0 +1,124 @@
+:root {
+  color: #e8ebf2;
+  background: #0d1017;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+button,
+input {
+  font: inherit;
+}
+
+.page {
+  width: min(1080px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+.hero {
+  margin-bottom: 48px;
+}
+.eyebrow {
+  color: #77e5b5;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+h1 {
+  margin: 8px 0 12px;
+  font-size: clamp(44px, 8vw, 84px);
+  line-height: 0.96;
+  letter-spacing: -0.055em;
+}
+.hero > p:last-child,
+.section-title p {
+  color: #939bab;
+}
+
+.demo-card {
+  margin-top: 20px;
+  padding: 24px;
+  border: 1px solid #282e3a;
+  border-radius: 16px;
+  background: #151922;
+  box-shadow: 0 20px 70px rgb(0 0 0 / 25%);
+}
+
+.file-row {
+  display: grid;
+  grid-template-columns: auto minmax(190px, auto) minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 20px;
+}
+
+.file-icon {
+  font-size: 24px;
+}
+.path-cell {
+  min-width: 0;
+  color: #9ca4b3;
+  font-size: 18px;
+}
+.size {
+  color: #d5d9e1;
+  white-space: nowrap;
+}
+
+.section-title {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 20px;
+}
+.section-title h2 {
+  margin: 0;
+}
+.section-title p {
+  margin: 6px 0 20px;
+}
+.section-title output {
+  color: #77e5b5;
+  font-variant-numeric: tabular-nums;
+}
+input[type='range'] {
+  width: 100%;
+  accent-color: #77e5b5;
+}
+
+.resizable-row {
+  display: flex;
+  max-width: 100%;
+  gap: 16px;
+  margin-top: 20px;
+  padding: 14px 16px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #0d1017;
+}
+
+.resizable-row > .overflow-follow {
+  flex: 1;
+}
+
+@media (max-width: 680px) {
+  .page {
+    width: min(100% - 24px, 1080px);
+    padding: 44px 0;
+  }
+  .file-row {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+  }
+  .path-cell {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+}

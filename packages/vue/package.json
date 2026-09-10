@@ -1,0 +1,58 @@
+{
+  "name": "overflow-follow-vue",
+  "version": "0.1.0",
+  "description": "Vue 3 component and composable for pointer-following overflow content.",
+  "author": "ss548",
+  "license": "MIT",
+  "keywords": [
+    "vue",
+    "vue3",
+    "overflow",
+    "text",
+    "pointer"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ss548/overflow-follow.git",
+    "directory": "packages/vue"
+  },
+  "homepage": "https://github.com/ss548/overflow-follow#vue-3",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./style.css": "./dist/index.css"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "overflow-follow": "workspace:^"
+  },
+  "peerDependencies": {
+    "vue": ">=3.3.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "vue": "^3.5.21"
+  }
+}

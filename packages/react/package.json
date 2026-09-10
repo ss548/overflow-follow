@@ -1,0 +1,61 @@
+{
+  "name": "overflow-follow-react",
+  "version": "0.1.0",
+  "description": "React component and hook for pointer-following overflow content.",
+  "author": "ss548",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "overflow",
+    "text",
+    "pointer",
+    "hook"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ss548/overflow-follow.git",
+    "directory": "packages/react"
+  },
+  "homepage": "https://github.com/ss548/overflow-follow#react",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./style.css": "./dist/index.css"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "build": "tsup src/index.tsx --format esm,cjs --dts --clean",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "overflow-follow": "workspace:^"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.3.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.3.0",
+    "tsup": "^8.5.0"
+  }
+}

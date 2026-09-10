@@ -1,0 +1,49 @@
+{
+  "name": "overflow-follow",
+  "version": "0.1.0",
+  "description": "Framework-agnostic pointer-following overflow content controller.",
+  "author": "ss548",
+  "license": "MIT",
+  "keywords": [
+    "overflow",
+    "text",
+    "pointer",
+    "hover",
+    "marquee"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ss548/overflow-follow.git",
+    "directory": "packages/core"
+  },
+  "homepage": "https://github.com/ss548/overflow-follow#readme",
+  "bugs": "https://github.com/ss548/overflow-follow/issues",
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0"
+  }
+}

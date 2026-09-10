@@ -1,0 +1,28 @@
+{
+  "name": "overflow-follow-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Pointer-following overflow content for Vanilla JS, Vue and React.",
+  "author": "ss548",
+  "license": "MIT",
+  "packageManager": "pnpm@10.32.1",
+  "scripts": {
+    "build": "pnpm --filter './packages/*' build",
+    "dev": "pnpm --filter overflow-follow-playground dev",
+    "typecheck": "pnpm --filter './packages/*' typecheck",
+    "test": "pnpm --filter overflow-follow build && pnpm test:packages",
+    "test:packages": "pnpm --filter './packages/*' --if-present test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "pnpm format:check && pnpm typecheck && pnpm build && pnpm test:packages",
+    "publish:packages": "node scripts/publish.mjs",
+    "publish:dry-run": "node scripts/publish.mjs --dry-run"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.1",
+    "happy-dom": "^18.0.1",
+    "prettier": "^3.9.6",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
+}
