@@ -152,15 +152,6 @@ pnpm dev
 pnpm check
 ```
 
-## 发布
-
-1. 在 GitHub 创建 `ss548/overflow-follow` 仓库并推送代码。
-2. 确认已登录 npm，并且四个包名仍然可用。
-3. 修改四个包的版本号并更新变更说明。
-4. 执行 `pnpm publish:packages`。
-
-GitHub Actions 也提供了手动发布流程，需要在仓库 Secrets 中添加 `NPM_TOKEN`。
-
 ## License
 
 [MIT](./LICENSE)

@@ -152,15 +152,6 @@ pnpm dev
 pnpm check
 ```
 
-## Publishing
-
-1. Create the `ss548/overflow-follow` repository on GitHub and push the code.
-2. Make sure npm is authenticated and all four package names are still available.
-3. Update the versions of all four packages and the changelog.
-4. Run `pnpm publish:packages`.
-
-A manual GitHub Actions publishing workflow is also included. Add `NPM_TOKEN` to the repository secrets before using it.
-
 ## License
 
 [MIT](./LICENSE)
